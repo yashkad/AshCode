@@ -1,0 +1,88 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');*/
+body{
+	/*background: #74b9ff;*/
+/*background: #0cebeb;  
+background: -webkit-linear-gradient(45deg, #29ffc6, #20e3b2, #0cebeb); 
+background: linear-gradient(45deg, #29ffc6, #20e3b2, #0cebeb); 
+*/
+/*background:linear-gradient(45deg,#ffaf00,#bb02ff);*/
+background: linear-gradient(to right,#e55039,#eb2f06);
+	margin: 0;
+	padding: 0;
+}
+.run-btn{
+	font-size: 1.2em;
+	padding: 5px;
+	background: #a29bfe;
+	margin: 10px;
+}
+.container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	/*text-align: center;*/
+}
+.code-area{
+	background: lightgray;
+	width: 90%;
+	padding: 5px;
+	/*text-align: center;*/
+}
+.code-area h4{
+	float: left;
+	width: 50%;
+}
+.code-area textarea{
+	/*outline: none;	*/
+	/*resize: none;*/
+	resize: vertical;
+	height: 30vh;
+	width: 90%;
+	font-size: 20px;
+	/*font-family: 'Reggae One', cursive;*/
+}
+.inputs{
+	background: black;
+	color: white;
+	resize: vertical;
+	height: 10vh;
+	width: 70%;
+	font-size: 20px;
+	padding: 10px;
+}
+.output{
+	margin: 20px 0;
+	background: #b8e994;
+	color: black;
+	resize: vertical;
+	height: 25vh;
+	width: 70%;
+	font-size: 20px;
+	padding: 10px;
+}
+.lang{
+	/*display: flex;*/
+
+}
+select{
+float: right;
+  /*width: 150px;*/
+  margin: 15px 2em;
+  width: 20%;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #CCC;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /*background: url(https://stackoverflow.com/favicon.ico) 96% / 15% no-repeat #EEE;*/
+  background: url(https://img.icons8.com/color/list/) 96% / 25px no-repeat #EEE;
+
+}
+
+.CodeMirror { 
+	text-align: left;
+	font-size: 26px;
+}
