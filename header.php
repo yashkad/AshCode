@@ -47,11 +47,18 @@
 			<p>👦🏻<?php echo $_SESSION['email']?><h5>				
 			</h5></p>
 		</div>
-		<div class="title">AshCode.com</div>
+		<div class="title" id="home">AshCode.com</div>
 		<div>
-			<a href="#" class="btn edit-btn hv">Open Editor</a>
+			<a href="editor.php" class="btn edit-btn hv">Open Editor</a>
 			<a href="login.php" class="btn login-btn hv" >Logout</a>
 		</div>
 	</nav>
+	<script type="text/javascript">
+		let home = document.getElementById("home");
+		home.addEventListener("click",()=>{
+			// window.location.href = "login.php";
+			console.log(window.location.pathname == "/index.php");
+		})
+	</script>
 </body>
 </html>

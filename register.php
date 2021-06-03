@@ -5,6 +5,11 @@
 		$name = $_POST['u_name'];
 		$pass1 = $_POST['u_pass1'];
 		$pass2 = $_POST['u_pass2'];
+
+		$arr = array(1);
+    	$solved = base64_encode(serialize($arr));
+
+
 		if(strcmp($pass1,$pass2) == 0 && $pass1!="" && $email != "" && $name != "")  {
 
 			$quer = "SELECT * FROM `userstable` WHERE email = '$email'";
@@ -14,12 +19,11 @@
 				echo "email already registered";
 			}
 			else {
-				$quer = "INSERT INTO `userstable` (`id`, `username`, `password`, `email`, `score`, `solved`) VALUES (NULL, '".$name."', '".$pass1."', '".$email."', '0', '0');";
+				$quer = "INSERT INTO `userstable` (`id`, `username`, `password`, `email`, `score`, `solved`) VALUES (NULL, '".$name."', '".$pass1."', '".$email."', '0', '.$solved.');";
 				$sql = mysqli_query($con,$quer);
 				if($sql) {
-					echo "<script>
-					alert('Account created');
-				</script>";
+					echo "
+	<script>alert('Account created');</script>";
 					header("Location:login.php");
 				};
 			}

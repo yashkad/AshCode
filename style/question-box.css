@@ -10,7 +10,9 @@ body{
 	background-attachment: fixed;
 
 }
-
+p {
+	font-size: 1.3rem;
+}
 .question-box{
 	/*display: flex;*/
 	align-items: center;
@@ -25,12 +27,17 @@ body{
 	color:white;
 	max-width: 900px;
 	box-shadow: 0 15px 25px rgba(10,10,10,2);
-
+	border-radius: 6px;
 }
 blockquote{
-	font-style: italic;
+	/*font-style: italic;
 	color: lightgray;
-	background: #210;
+	background: #210;*/
+	font-style: oblique;
+    color: black;
+    background: #f3e5f5;
+    border-radius: 1rem;
+    text-align: center;
 }
 .question-box-problem{
 
@@ -38,6 +45,7 @@ blockquote{
 h2{
 	color:lightgreen;
 	font-weight: bold;
+	font-size: 1.8rem;
 
 }
 
@@ -46,4 +54,23 @@ h2{
 	margin: 2em 0px;
 	max-width: 900px;
 	/*background: red;*/
+}
+
+.q-title {
+	/*color: aquamarine;*/
+    text-align: center;
+    /*padding: 0.4em;*/
+    /*margin: 1em;*/
+    /*border: 2px solid lightcoral;*/
+    /*border-radius: 1em;*/
+}
+.question {
+	border: 4px solid gray;
+	border-bottom: 1px solid gray;
+	padding: 1em 2em;
+}
+
+pre{
+	background: gray;
+	padding: 1em;
 }

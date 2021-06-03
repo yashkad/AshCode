@@ -1,13 +1,7 @@
-
-<?php 
-    echo "<script>let points = ".$_SESSION['points'].";</script>";
-    echo "<script>let id = ".$_SESSION['questionId'].";</script>";
-
- ?>
+<!DOCTYPE html>
+<html>
 <head>
-	<title>Code Panel</title>
-
-	<link rel="stylesheet" type="text/css" href="./style/code-panel.css">
+	<link rel="stylesheet" type="text/css" href="./style/editor.css">
 
 <script src="./codemirror/lib/codemirror.js"></script>
 <link rel="stylesheet" href="./codemirror/lib/codemirror.css">
@@ -47,8 +41,7 @@
 </textarea>
   
   		<button id="run" onclick="run()" class="run-btn">▶️ Run (Ctrl + S)</button>
-  		<button id="submitButton" onclick="submitProgram()" class="run-btn">✔ Submit (Ctrl + F9)</button>
-
+  		
 		</div>
 
 		<label for="input"><h4>Input Box</h4></label>
@@ -149,13 +142,7 @@
             
             // let encodedExpectedOutput = encode($("#expected-output").val());
             let encodedExpectedOutput = "" ;
-            if(isSubmited)
-            {
-                // isSubmited = false;
-                $("#input").val(<?php echo json_encode(str_replace("<br>","",$customInput)); ?>);
-                console.log(<?php echo json_encode(str_replace("<br>","",$expectedOutput)); ?>);
-                encodedExpectedOutput = encode(<?php echo json_encode(str_replace("<br>","",$expectedOutput)); ?>);
-            }
+            
             // console.log(encodedExpectedOutput);
 
            
@@ -192,22 +179,15 @@
             });
         }
 
-        function submitProgram() {
-            isSubmited = true;
-            run();
-        }
+        
         $("body").keydown(function (e) {
             if (e.ctrlKey && (e.keyCode == 83)) {
             	e.preventDefault();
                 
-                alert(<?php echo json_encode($_SESSION['solved'])?>);
-                console.log(<?php echo json_encode($_SESSION['points']) ?>);
-                
+               
                 run();
             }
-            if(e.ctrlKey && e.keyCode == 120 ) {
-            	submitProgram();
-            }
+            
         });
 
         $("textarea").keydown(function (e) {
@@ -238,11 +218,14 @@
         	matchBrackets : true,
         	// extraKeys :{ "Ctrl-Space":"autocomplete"},
         });
-        console.log(myCodeMirror.getValue())
+        // console.log(myCodeMirror.getValue())
 
-        myCodeMirror.setSize("100%","500px")
+        myCodeMirror.setSize("100%","500px");
+        myCodeMirror.refresh();
 
     </script>
 
 
 </body>
+
+</html>

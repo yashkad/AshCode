@@ -11,6 +11,7 @@
 	}
 	$quer = "SELECT * FROM problems";
 	$sql = mysqli_query($con,"SELECT * FROM problems");
+	$flag = 0;
  ?>	
 
 <!DOCTYPE html>
@@ -28,15 +29,16 @@
 		<div class="list-card" style="background: lightgoldenrodyellow;text-align: center;">
 			<div class="list-card-top">
 				<h2>User Name : <?php echo "<span>".$_SESSION['userName']."</span>"; ?></h2>
-				<h3><?php echo "Solved : <span>".($_SESSION['solved'])."</span>\t Score : <span>".$_SESSION['score']."</span>";?></h3>
+				<h3><?php echo "Solved : <span>".(count($_SESSION['solved'])-1)."</span>\t Score : <span>".$_SESSION['score']."</span>";?></h3>
 			</div>
 		</div>
 			<?php while($row = mysqli_fetch_assoc($sql)) {  ?>
-			<div class="list-card">
-					<div class="list-card-top">
+			<div class="list-card <?php if(in_array($row['id'], $_SESSION['solved'])) {echo "solved";$flag=1;} ?>">
+				<div class="list-card-top">
 					<h2> <?php echo $row['name']; ?>  </h2>
 					<p><pre><?php echo $row['difficulty'].", Max Points ". $row['points'] ?></pre></p>
 				</div>
+				<?php if($flag == 1) echo "<span class='tick'>✅</span>";  ?>
 				<a href="question.php?id=<?php echo $row['id']?>" class="btn">Solve challange</a>
 			</div>
 		<?php } ?>

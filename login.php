@@ -17,11 +17,11 @@
 				$_SESSION['userName'] = $row['username'];
 				$_SESSION['email'] = $row['email'];
 				$_SESSION['score'] = $row['score'];
-				// $_SESSION['solved'] = unserialize(base64_decode($row['solved']));
-				$_SESSION['solved'] = array(1,23,4);
-
+				$_SESSION['solved'] = unserialize(base64_decode($row['solved']));
+				$_SESSION['userId'] = $row['id'];
 
 				echo "Proceding to index.php";
+				
 				 echo "
 				 <script>
 				 	setTimeout(function() {
@@ -29,6 +29,8 @@
 				 		},1000);
 				 </script>";
     			exit;
+
+    			
 			}
 		}
 	}	
