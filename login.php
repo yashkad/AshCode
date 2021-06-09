@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	print_r($_SESSION);
+	// print_r($_SESSION);
 	$_SESSION['login'] = false;
 	require "database/config.php";
 	if(isset($_POST["submit"])) {
@@ -20,7 +20,7 @@
 				$_SESSION['solved'] = unserialize(base64_decode($row['solved']));
 				$_SESSION['userId'] = $row['id'];
 
-				echo "Proceding to index.php";
+				echo "<center>Proceding to index.php</center>";
 				
 				 echo "
 				 <script>

@@ -73,6 +73,7 @@
 		if(!$sqlRun) {
 			die("Invalid query ");
 		}
+		header("Location:addQuestions.php");
 	}
 
  ?>

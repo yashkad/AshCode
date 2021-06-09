@@ -1,12 +1,19 @@
-// Project todos
+// Project todos 
+// D:\installed programs\xamppinstallation\htdocs\TY2021\HelloWOrld
 "25 may 2021" :  {
 	1 : "check user output == expected output",
 	2 : ""
+	},
+
 "3 june 2021" : {
 	1 : "form validation (login,register,add question)",
 	2 : "ui improvement (question page)",
 	3 : "new page for editor (open editor button)",
-	4 : "add header and footer to all pages"
+	4 : "add header and footer to all pages",
+	5 : "when register new user Pop up modal should displayed",
+	7 : "when wrong inputs entered popup should displayed",
+	8 : "loading symbol when entering index.php",
+	9 : "",
+	}
 
-}
 }

@@ -47,7 +47,7 @@
 			<p>👦🏻<?php echo $_SESSION['email']?><h5>				
 			</h5></p>
 		</div>
-		<div class="title" id="home">AshCode.com</div>
+		<div class="title" id="home">CodingLab.io</div>
 		<div>
 			<a href="editor.php" class="btn edit-btn hv">Open Editor</a>
 			<a href="login.php" class="btn login-btn hv" >Logout</a>

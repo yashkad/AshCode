@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
 body{
 	margin: 0;
 	padding: 0;
@@ -8,6 +9,7 @@ body{
 	flex-direction: column;
 	background: gray;
 	background-attachment: fixed;
+	font-family: 'Inconsolata', monospace;
 
 }
 p {
@@ -19,6 +21,8 @@ p {
 	justify-content: center;
 	flex-direction: column;
 	background: #263238;
+/*background: #263238 url(https://namelix.com/img/background.svg) no-repeat;*/
+
 	/*background:linear-gradient(to right bottom, rgba(255,255,201,0.3),rgba(255,255,25,0.3));*/
 
 	/*border-radius: 5px;*/

@@ -1,4 +1,80 @@
 body {
-	background:black;
-	color: white;
+   background: black;
+   color: white;
+   margin: 0;
+   padding: 0;
+}
+.code-area {
+   margin: 2.5rem;
+}
+.input-group {
+   background: linear-gradient(to right , lightcoral ,lightsalmon);
+   display: flex;
+   width: 100%;
+   overflow: hidden;
+   justify-content: center;
+}
+.grp {
+   height: 1.8rem;
+}
+.grp input , select ,button{
+   height: 100%;
+   margin: 0px;
+   text-align: center;
+}
+.grp button {
+   width: 100;
+   flex: 0 0 2rem;
+}
+.container {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   margin: 10px 20px;
+   margin-right: 3rem;
+}
+.left ,.right {
+   height: 7rem;
+}
+.left {
+   /*width: 40%;*/
+   flex: 1;
+}
+.right{
+   /*width: 50%;*/
+   flex:  2;
+}
+.left textarea , .right textarea {
+   width: 100%;
+   height: 100%;
+   resize: vertical;
+   border: 5px solid lightcoral;
+   padding: 0.8rem;
+   font-size: 1rem;
+   background: black;
+   color: white;
+}
+
+.CodeMirror {
+   font-size: 18px;
+}
+.CodeMirror ::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+.CodeMirror ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+.CodeMirror ::-webkit-scrollbar-thumb {
+  background: linear-gradient(tomato,mediumpurple); 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.CodeMirror ::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
 }

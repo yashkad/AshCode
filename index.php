@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 	require "database/config.php";
-	print_r($_SESSION);
+	// print_r($_SESSION);
 	if($_SESSION['login'] == false) {
 		// echo "<script>
 		// 		window.location.href='login.php';
@@ -38,7 +38,7 @@
 					<h2> <?php echo $row['name']; ?>  </h2>
 					<p><pre><?php echo $row['difficulty'].", Max Points ". $row['points'] ?></pre></p>
 				</div>
-				<?php if($flag == 1) echo "<span class='tick'>✅</span>";  ?>
+				<?php if($flag == 1) echo "<span class='tick'>✅</span>"; $flag = 0; ?>
 				<a href="question.php?id=<?php echo $row['id']?>" class="btn">Solve challange</a>
 			</div>
 		<?php } ?>

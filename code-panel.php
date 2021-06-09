@@ -36,15 +36,17 @@
 		        <option>C</option>
 		        <option selected="">Java</option>
 		        <option >Python</option>
-		        <option>Ruby</option>
-		        <option>JavaScript (Node)</option>
+                <option>Ruby</option>
+                
+                <option>PHP</option>
+		        <option>TypeScript</option>
+
 		    </select>
-    		<textarea id="source" placeholder="Enter your code Here">class Main {
-	public static void main(String args[]) {
-		System.out.println("Hello world");
-    }
-}
-</textarea>
+
+            <input type="number" name="font-size" max="30" min="8" id="font-size" value="18">
+
+            
+    		<textarea id="source" placeholder="Enter your code Here"></textarea>
   
   		<button id="run" onclick="run()" class="run-btn">▶️ Run (Ctrl + S)</button>
   		<button id="submitButton" onclick="submitProgram()" class="run-btn">✔ Submit (Ctrl + F9)</button>
@@ -74,6 +76,9 @@
             "Python": 71,
             "Ruby": 72,
             "JavaScript (Node)":63,
+            "Go":22,
+            "PHP" : 68,
+            "TypeScript" : 74,
         };
 
         function encode(str) {
@@ -238,9 +243,68 @@
         	matchBrackets : true,
         	// extraKeys :{ "Ctrl-Space":"autocomplete"},
         });
-        console.log(myCodeMirror.getValue())
+        console.log(myCodeMirror.getValue());
 
-        myCodeMirror.setSize("100%","500px")
+        myCodeMirror.setSize("100%","500px");
+
+$("#font-size").on("change",(e)=>{
+    console.log(e.target.value)
+    $(".CodeMirror").css("fontSize", e.target.value+'px');
+});
+
+         var sampleCode = {
+            "Bash" : 'echo "Hello World"',
+             "C": `#include <stdio.h>
+
+int main() {
+    //code
+    return 0;
+}`,
+             "C#": `using System;
+
+public class Main
+{
+    public static void Main()
+    {
+        // your code goes here
+    }
+}
+`,
+             "C++": `#include <iostream>
+using namespace std;
+
+int main() {
+    cout<<"AshCode!";
+    return 0;
+}`,
+             "Java": `import java.util.*;
+class Main {
+    public static void main(String args[]) {
+        System.out.println("Hello world");
+    }
+}
+`,
+             "Python": `print("Hello, world!")`,
+             "Ruby": `puts "Hello, world!"`,
+             "Go": `package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("hello world")
+}`,
+             "PHP": `<?//php
+// PHP code goes here
+?>`,
+             "TypeScript" : `let message: string = 'Hello, World!';
+console.log(message);`,
+         }
+         $('#lang').on("change",()=>{
+            myCodeMirror.setValue(sampleCode[$("#lang").val()]);
+            console.log(sampleCode[$("#lang").val()]);
+         })
+         myCodeMirror.setValue(sampleCode["Java"]);
+
 
     </script>
 

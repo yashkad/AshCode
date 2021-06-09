@@ -20,7 +20,9 @@
 		if(!$sql) {
 			die("Invalid query ");
 		}
-
+		header("Location:index.php");
 	}
 
 ?>
+
+
