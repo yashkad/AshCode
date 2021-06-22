@@ -9,6 +9,7 @@ body
 	/*font-size: 10px;*/
 	/*text-align: center;*/
 	font-family: 'Inconsolata', monospace;
+	overflow-x: hidden;
 
 }
 ::-moz-selection { /* Code for Firefox */
@@ -28,7 +29,7 @@ body
 	align-items: center;
 	flex-direction: column;
 	gap: 3.5px;
-	margin-top: 3em;
+	margin-top: 7em;
 	margin-bottom: 3em;
 }
 .list-card{
@@ -64,9 +65,13 @@ body
 	background-image: linear-gradient(to right, violet, #396afc);
   transition: all .3s ease-in-out;
 	background-position: 100% ;*/
-
 }
 
+.list-card pre{
+	font-size: 0.9rem;
+    color: #757575;
+    font-weight: 900;
+}
 @media only screen and (max-width: 1000px) {
   .list-card {
     width: 25em;
@@ -128,6 +133,25 @@ span {
 	background: none;
 
 }
+
+footer {
+	    width: 100%;
+    background-color: mediumslateblue;
+    color: white;
+    text-align: center;
+    height: 2em;
+    padding: 0.1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+footer span {
+	background: none;
+	color: red;
+}
+
 /*body
 {
 	margin: 0;

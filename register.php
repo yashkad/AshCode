@@ -43,6 +43,9 @@
 	<link rel="stylesheet" type="text/css" href="style/login-style.css">
 </head>
 <body>
+	<nav>
+		<h1>CodingLab.io</h1>
+	</nav>
 	<div class="login-box">
 	  <h2>Register</h2>
 	  <form method="POST" id="myform">

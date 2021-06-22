@@ -88,3 +88,16 @@ float: right;
 	text-align: left;
 	font-size: 26px;
 }
+
+.top-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.font-size-btn {
+	font-size: 1rem;
+    padding: 0.4rem 2rem;
+    background: darkslateblue;
+    font-weight: 600;
+    color: white;
+}

@@ -7,9 +7,22 @@ body {
   font-family: sans-serif;
   /*background: linear-gradient(#141e30, #243b55);*/
   /*background: mediumvioletred;*/
-  background: linear-gradient(45deg,tomato, mediumvioletred );
+  /*background: linear-gradient(45deg,tomato, mediumvioletred );*/
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
-
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 .login-box {
   position: absolute;
   top: 50%;
@@ -102,7 +115,17 @@ body {
 
 }
 
-
+/*heading*/
+nav h1 {
+  color: lightcyan;
+  text-align: center;
+  font-family: consolas;
+  font-size: 3.2rem;
+  margin-top: 4rem;
+  margin-bottom: 0;
+  padding: 1rem;
+  text-shadow: 6px 5px darkslategrey;
+}
 
 /*.login-box a span {
   position: absolute;

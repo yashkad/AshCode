@@ -27,23 +27,26 @@
     </form>
 	<div class="container">
 		<div class="code-area">
-			<h4>Source Code</h4>
+			<!-- <h4>Source Code</h4> -->
+            <div class="top-btn">
+                <input type="number" class="font-size-btn" name="font-size" max="30" min="8" id="font-size" value="18">
 
-			<select id="lang">
-		        <option>Bash</option>
-		        <option>C#</option>
-		        <option >C++</option>
-		        <option>C</option>
-		        <option selected="">Java</option>
-		        <option >Python</option>
+            <select id="lang">
+                <option>Bash</option>
+                <option>C#</option>
+                <option >C++</option>
+                <option>C</option>
+                <option selected="">Java</option>
+                <option >Python</option>
                 <option>Ruby</option>
                 
                 <option>PHP</option>
-		        <option>TypeScript</option>
+                <option>TypeScript</option>
 
-		    </select>
+            </select>
 
-            <input type="number" name="font-size" max="30" min="8" id="font-size" value="18">
+            </div>
+            
 
             
     		<textarea id="source" placeholder="Enter your code Here"></textarea>

@@ -43,8 +43,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<title>User Login</title>
 	<link rel="stylesheet" type="text/css" href="style/login-style.css">
+
 </head>
 <body>
+	<nav>
+		<h1>CodingLab.io</h1>
+	</nav>
 	<div class="login-box">
 	  <h2>Login</h2>
 	  <form id="myform" method="POST">
@@ -53,7 +57,7 @@
 	      <label>Email</label>
 	    </div>
 	    <div class="user-box">
-	      <input type="password" name="password" required="">
+	      <input min="4" type="password" name="password" required="">
 	      <label>Password</label>
 	    </div>
 

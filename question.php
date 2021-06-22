@@ -7,6 +7,10 @@
 	
 </head>
 <body>
+
+	<div class="heading">
+		<h1><a href="./index.php">CodingLab.io</a></h1>
+	</div>
 	<div class="question-box">
 <?php 
 	session_start();
@@ -73,8 +77,12 @@
 			require("code-panel.php");
 
 		 ?>
-
-
 	</div>
+
+	<footer>
+		<p>Made with<span>❤</span>by 
+		Yash.
+		 Copyright &copy; 2021</p>
+	</footer>
 </body>
 </html>

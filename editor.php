@@ -31,13 +31,15 @@
             </div>
 
             <div class="grp-font grp">
-                <input type="number" name="font-size" max="30" min="8" id="font-size" value="18" >
+                <input type="number" name="font-size" max="40" min="8" id="font-size" value="18" >
             </div>
             <div class="grp-run grp">
                 <button id="run" onclick="run()" class="run-btn">▶️ Run (Ctrl + S)</button>
             </div>
         </div>
-      
+<!-- del -->
+<!-- <button id="save">save</button> -->
+<!--  -->
     <div class="code-area">
         <textarea id="source" placeholder="Enter your code Here"></textarea>
     </div>
@@ -218,7 +220,7 @@
          });
          // console.log(myCodeMirror.getValue())
          
-         myCodeMirror.setSize("100%","600px");
+         myCodeMirror.setSize("100%","90vh");
 myCodeMirror.setOption("theme","dracula");
          
 $("#font-size").on("change",(e)=>{
@@ -281,7 +283,20 @@ console.log(message);`,
 
          myCodeMirror.setValue(sampleCode["Java"]);
 
-
+// del save btn
+    // $("#save").on("click",()=>{
+        // console.log(myCodeMirror.getValue());
+        // let obj = {
+        //     lang : $("#lang").val(),
+        //     code: myCodeMirror.getValue()
+        // }
+        // // console.log($("#lang").val());
+        // console.log(obj);
+        // // localStorage.setItem("code",JSON.stringify(obj));
+        // let ans = JSON.parse(localStorage.getItem("code"));
+        // console.log(ans["code"]);
+    // });
+// delete save button
       </script>
    </body>
 </html>
