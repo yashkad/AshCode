@@ -67,7 +67,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<script type="text/javascript">
-        API_KEY = "bf5bf7ce00msh8d6e256c49ca1e5p1a2826jsne8d27a1059e8"; // Get yours for free at https://judge0.com/ce or https://judge0.com/extra-ce
+        API_KEY = ""; // Get yours for free at https://judge0.com/ce or https://judge0.com/extra-ce
 
         let isSubmited = false;
         var language_to_id = {
